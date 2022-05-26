@@ -1,0 +1,138 @@
+.people {
+
+  .mv {
+    @include mv;
+    background-image: url(./../img/people/mv.jpg);
+  }
+
+  .main {
+    &__wrapper {
+      border: 20px solid $color-main-d;
+
+      @include sm {
+        padding-bottom: 100px;
+        border: 10px solid $color-main-d;
+
+      }
+    }
+
+    &__container {
+      position: relative;
+      @include container;
+      margin-bottom: 200px;
+
+
+
+      &--title {
+        position: absolute;
+        left: 0;
+        top: -230px;
+        font-family: $font-deco;
+        font-size: 15rem;
+        color: $color-main-l;
+        position: absolute;
+        transform: rotate(-20deg);
+
+        @include sm {
+          font-size: 10rem;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 280px;
+      text-align: center;
+
+      @include tab {
+        flex-direction: column;
+      }
+
+      li {
+        max-width: 380px;
+        width: 32%;
+
+        @include tab {
+          max-width: 100%;
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        &:nth-child(odd) {
+          margin-right: 10%;
+
+          @include tab {
+            margin-right: auto;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-top: 100px;
+
+
+        }
+
+        &:nth-child(4) {
+          margin-top: 100px;
+
+
+
+        }
+
+        &:not(:first-child) {
+          @include tab {
+            margin-top: 90px;
+          }
+        }
+      }
+
+
+
+
+
+      &--img {
+        width: 375px;
+        height: 375px;
+
+        @include sm {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &--intro {
+        .intro__roll {
+          font-size: 2.4rem;
+          font-weight: bold;
+          margin-top: 30px;
+        }
+
+        .intro__age {
+          font-size: 1.6rem;
+          color: $color-main-d;
+        }
+      }
+
+      &--text {
+        text-align: left;
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 2px solid $color-main-l;
+
+        .text__title {
+          font-size: 2rem;
+          color: $color-main-d;
+          font-weight: bold;
+        }
+
+        .text__desc {
+          font-size: 1.6rem;
+          margin-top: 25px;
+
+        }
+      }
+    }
+  }
+}
