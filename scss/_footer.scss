@@ -1,0 +1,156 @@
+.footer {
+  &__wrapper {
+    position: relative;
+    background: $color-main-d;
+
+    @include tab {
+      padding-bottom: 100px;
+    }
+
+    .list__content {
+      a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      a::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        transition: all 0.3s ease 0s;
+      }
+
+      /*ホバー無し状態のスタイル＿ここまで*/
+
+      /*ホバー有り状態のスタイル*/
+      a:hover {
+        color: #fff !important;
+        text-decoration: none !important;
+      }
+
+      a:hover::after {
+        width: 100%;
+      }
+    }
+
+    &--img {
+
+
+      .img--boy {
+        width: 120px;
+        position: absolute;
+        left: 40%;
+        transform: translateX(-40%);
+        top: -148px;
+
+        @include sm {
+          width: 60px;
+          top: -85px;
+          left: 35%;
+        }
+      }
+
+      .img--cake {
+        width: 120px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -60px;
+
+        @include sm {
+          width: 60px;
+          top: -40px;
+        }
+      }
+
+      .img--girl {
+        width: 120px;
+        position: absolute;
+        left: 60%;
+        transform: translateX(-60%);
+        top: -150px;
+
+        @include sm {
+          width: 60px;
+          top: -85px;
+          left: 65%;
+
+        }
+      }
+
+    }
+  }
+
+  &__container {
+    @include container;
+    padding-top: 170px;
+
+    @include tab {
+      padding-top: 90px;
+    }
+  }
+
+  &__menu--big {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 75px;
+
+    @include sm {
+      width: 100%;
+      padding-bottom: 60px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__bottom {
+    width: 600px;
+    margin: 0 auto;
+    border-top: 2px solid $color-main-l;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+
+    @include sm {
+      width: 100%;
+      padding-top: 60px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    font-size: 2.8rem;
+    font-size: $font-english;
+
+    @include tab {
+      font-size: 2rem;
+    }
+  }
+
+  &__address {
+    font-size: 1.6rem;
+    font-style: normal;
+
+    @include tab {
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+  }
+
+  &__copy {
+    margin-top: 40px;
+    font-size: 1.2rem;
+  }
+}
