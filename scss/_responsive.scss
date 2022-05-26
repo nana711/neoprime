@@ -1,0 +1,23 @@
+// ブレイクポイント
+$pc-breakpoint:1300px;
+$sm-breakpoint:1299px;
+$small-breakpoint:788px;
+
+// メディアクエリ
+@mixin pc {
+  @media screen and (min-width:$pc-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width:$sm-breakpoint) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width:$small-breakpoint) {
+    @content;
+  }
+}
